@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import unap.epis.mytasklist.data.local.TaskDao
 import unap.epis.mytasklist.data.local.TaskDatabase
 import javax.inject.Singleton
 import kotlin.jvm.java
@@ -24,4 +25,11 @@ object DatabaseModule {
             "taskflow_database"
         ).build()
     }
+
+    @Provides
+    @Singleton
+    fun provideTaskDao(database: TaskDatabase) : TaskDao {
+        return database.taskDao()
+    }
+
 }
