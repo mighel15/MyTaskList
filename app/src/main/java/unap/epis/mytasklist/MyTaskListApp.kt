@@ -1,4 +1,8 @@
 package unap.epis.mytasklist
 
-class MyTaskListApp {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MyTaskListApp : Application() {
 }
