@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
+import unap.epis.mytasklist.ui.navigation.Navigation
 import unap.epis.mytasklist.ui.screens.tasklist.TaskListScreen
 import unap.epis.mytasklist.ui.theme.MyTaskListTheme
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            //TaskListScreen()
+            Navigation()
         }
     }
 }
